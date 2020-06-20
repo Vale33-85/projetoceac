@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+ 
+
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+   <script src="https://kit.fontawesome.com/9e0559694d.js" crossorigin="anonymous"></script>
+
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,400&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+  	.jumbotron{margin-top: -20px}
+  	#paineis{ transition: transform .2s;}
+  	#paineis:hover{border: 1px solid red; margin-top: -10px;transform: scale(1.1);
+
+
+  	}
+@media screen and (max-width: 768px) {
+  .jumbotron .subtitulo{display: none;
+   
+  }
+ 
+  }
+  
+
+
+@media screen and (max-width: 375px) {
+ 
+   
+  .jumbotron .btn-group{display: none}
+}
+.jumbotron .img{margin-top: 10px}
+}
+
+
+
+
+* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 50px;
+
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+    background-color: #E6E6FA;
+    color: white
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+
+}
+
+.item blockquote p:before {
+    /*content: "\f10d";*/
+    padding-right: 5px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/*Rodapé*/
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: none;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+ background-color: rgba(255, 180, 255,0.5)
+  color: black;
+}
+
+.flip-box-back {
+  background-color: rgba(255, 180, 255,0.5)
+  color: black;
+  transform: rotateY(180deg);
+}
+  </style>
+
+<script type="text/javascript">// When the DOM is ready, run this function
+$(document).ready(function() {
+  //Set the carousel options
+  $('#quote-carousel').carousel({
+    pause: true,
+    interval: 4000,
+  });
+});</script>
+</head>
+
+<body >
+<!--Navbar-->
+<nav class="navbar navbar-inverse navbar-fixe-top" id="main-navbar" role="navigation" style="background: rgba(158, 228, 255); border:none;">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="trabfinalboots2.html" class="navbar-brand"><img src="MarcaAgua4.png" style="height: 50px;margin-top:-15px"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<a href="#" class="btn btn-info navbar-btn navbar-right">Compre agora</a>
+
+
+			<ul class="nav navbar-nav">
+
+				<li><a href="sobrenos.html">Sobre</a></li>
+				<li><a href="catalogoboot.html">Catálogo</a></li>
+				<li><a href="#section-faq">Faq</a></li>
+				<li><a href="contatoboot.html">Contacto</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+</nav>
+
+<!--Banner-->
+<div class="jumbotron"style="background-color: rgba(255, 180, 255,0.5);margin-top:-50px;">
+	<div class="container text-center">
+		<h1><img src="MarcaAgua2,1.png" class="img" style="width: 80%; text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);"></h1>
+		<p class="subtitulo" style="font-size: 40%;margin: 0 auto; ; 
+  } "><img style="width: 40%" src="https://fontmeme.com/permalink/200609/0dfdda645e84c4b46ae9eda75ab3a4d3.png" alt="stamping-nico-font" border="0"></a></p>
+
+		<div class="btn-group"class="botoes"
+		 style="margin-top: 15px">
+
+			<a href="#" class="btn btn-lg btn-info">Compre agora</a>
+			<a href="#" class="btn btn-lg btn-default">Fale conosco</a>
+			
+
+		</div>
+	</div>
+
+</div>
+
+<hr style="font-style: dotted">
+<!--Gallery-->
+<div class="container">
+	
+	<section>
+		<div class="page-header" id="section-gallery" >
+			
+
+<h2 style="font-family: 'Oswald', sans-serif;">Galeria<small> Veja alguns dos nossos clientes pequeninos.</small></h2>
+			
+		</div>
+		<div class="carousel slide" id="gallery-carousel"  data-ride="carousel">
+		<!--	<ol class="carousel-indicators">
+				<li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#gallery-carousel" data-slide-to="1"></li>
+				<li data-target="#gallery-carousel" data-slide-to="2"></li>
+
+			</ol>-->
+			
+			<div class="carousel-inner" style="margin: 0 auto;">
+				<div class="item active">
+					<img src="BeFunky-collage1.png" alt="" images=""style="margin: 0 auto;width: 100%">
+					
+					<!--<div class="carousel-caption">This is a caption</div>-->
+					
+				</div>
+				<div class="item"style=";">
+					<img src="BeFunky-collage2.png" alt="" images=""style="margin: 0 auto;width: 100%">
+			
+					<!--<div class="carousel-caption">This is a caption</div>-->
+					
+				</div>
+				<div class="item"style="">
+					<img src="BeFunky-collage3.png" alt="" images=""style="margin: 0 auto;width: 100%">
+					
+					<!--<div class="carousel-caption">This is a caption</div>-->
+					
+				</div>
+			</div>
+			<a href="#gallery-carousel" class="left carousel-control" data-slide="prev">
+				<span class="glyphicon glyphicon-menu-left" style="top: 45%; color:pink">  </span>
+			</a>
+			<a href="#gallery-carousel" class="right carousel-control" data-slide="next">
+				<span class="glyphicon glyphicon-menu-right" style="top: 45%; color:pink"> </span>
+			</a>
+		
+
+
+	</section>
+</div>
+
+
+<!--registre-se-->
+
+<!--
+<div class="container-fluid text-center" class="">
+<section>
+
+		<div class="img"></div>
+		
+		
+		<h3>Subscreva e seja informado sobre cada novidade !</h3>
+		<p>Insira seu email abaixo</p>
+		<form action="#" class="form-inline" role="form">
+			<div class="form-group">
+				<label for="Subscribe-name" class="sr-only">Name</label>
+				<input type="text" class="form-control" id="Subscribe-name" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<label for="Subscribe-email" class="sr-only">Email</label>
+				<input type="text" class="form-control" id="Subscribe-email" placeholder="Email">
+			</div>
+			<button type="submit" class="btn btn-default">Subscribe</button>
+			<p><small><em>Your email will not be used for SPAM</em></small></p>
+		</form>
+		
+		
+
+
+
+</section>
+</div>
+
+-->
+<hr>
+<!--Features-->
+<div class="container"style="font-family: 'Oswald', sans-serif;">
+<section>
+	
+	<div class="page-header"  id="section-features" style="">
+		<h2>Modelos. <small> Estas são as características dos nossos produtos.</small></h2>
+	</div>
+
+
+	<div class="row"style="margin-bottom: 20px;">
+		<div class="col-lg-8"style="">
+			<h3>This is a feature title</h3>
+			<p style="font-family: 'Open Sans', sans-serif;;">This is the descripition of this features.</p>
+		</div>
+		<div class="col-lg-4"style="">
+			<img src="l9.jpg" alt="Feature Image" class="img-responsive">
+		</div>
+	</div>
+
+	<div class="row"style="margin-bottom: 20px;">
+		<div class="col-lg-8"style="">
+			<h3>Laços infantis</h3>
+			<p style="font-family: 'Open Sans', sans-serif;">Laços em ganchinho forrados.</p>
+		</div>
+		<div class="col-lg-4"style="">
+			<img src="83100429_755264701648777_791391756292718592_n.jpg" alt="Feature Image" class="img-responsive">
+		</div>
+	</div>
+
+	<div class="row"style="margin-bottom: 20px;">
+		<div class="col-lg-8"style="">
+			<h3>Lacinhos New born and Baby</h3>
+			<p style="font-family: 'Open Sans', sans-serif;">Lacinhos em fita de meia de seda, material confortável que não magoa nem aperta a cabecinha do bebé. Pode ser usado desde o nascimentos até os 24 meses.</p>
+		</div>
+		<div class="col-lg-4"style="">
+			<img src="l14.jpg" alt="Feature Image" class="img-responsive">
+		</div>
+	</div>
+</section>
+</div>
+
+
+<hr>
+   <!-- Carousel Slides / Quotes -->
+<div class="container"   style="font-family: 'Oswald', sans-serif;top: 45%;">
+  <div class="row" >
+    <div class=' col-md-12 text-center' style=";">
+    <h2>O que dizem nossos clientes</h2>
+    </div>
+  </div>
+  <div class='row'>
+    <div class=' col-md-12'style="padding-top:15px ;">
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner" style="width: 100%">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row"style="font-family: 'Alegreya', serif;">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
+                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                </div>
+                <div class="col-sm-8">
+                  <p><i class="fas fa-quote-left"></i> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-8">
+                  <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-8">
+                  <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                  <small>Someone famous</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev --><!--
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" > </a>-->
+      </div>                          
+    </div>
+  </div>
+</div>
+       
+<!--Testimonials--><!--
+<div class="container"style="margin-top: ">
+	<section>
+	<div class="page-header" id="section-testimonials">
+
+		<h2>Comentários.<small> O que dizem nossos clientes.</small></h2>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4">
+			<blockquote>
+				
+  <img src="74662019_154560852566637_7404737713465336436_n.jpg" alt="Avatar" style="width:70px; float: left;">
+  <p style="float: right;"><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+  <p style="float: right;">John Doe saved us from a web disaster.</p>
+
+			</blockquote>
+		
+		</div>
+		<div class="col-lg-4">
+			<blockquote>
+				<p>This is an awesome product and i love it all the way!</p>
+				<footer>Autor</footer>
+			</blockquote>
+			
+		</div>
+		<div class="col-lg-4">
+			<blockquote>
+				<p>This is an awesome product and i love it all the way!</p>
+				<footer>Autor</footer>
+			</blockquote>
+			
+		</div>
+	</div>
+
+	<p class="text-center"><em>Wanna tell us about the product? Click the following button.</em></p>
+	<p class="text-center"> <a href="#section-contact" class="btn btn-default">Contact Us</a></p>
+
+	</section>
+</div>-->
+
+<div class="container" style="margin-top: 50px;font-family: 'Oswald', sans-serif;">
+	<section>
+	<div class="row" >
+		<div class="col-lg-4">
+			
+		  <div class="panel panel-default text-center" id="paineis" style="background: rgba(158, 228, 255,0.4); ">
+			<div class="panel-body">
+				<span class=""><i class="fas fa-cut"></i></span>
+				<h4>Laços personalizados </h4>
+				<p style="font-family: 'Open Sans', sans-serif;">Diga-nos o que deseja.</p>
+			</div>
+		</div>
+	</div>
+		<div class="col-lg-4">
+			
+		  <div class="panel panel-default text-center" id="paineis" style="background: rgba(158, 228, 255,0.4)">
+			<div class="panel-body">
+				<span class=""><i class="fas fa-truck"></i></span>
+				<h4>Envio para toda Europa</h4>
+				<p style="font-family: 'Open Sans', sans-serif;">Entrega rápida e segura </p>
+			</div>
+		</div>
+	</div>
+	   <div class="col-lg-4">
+			
+		  <div class="panel panel-default text-center" id="paineis"  style="background: rgba(158, 228, 255,0.4)">
+			<div class="panel-body">
+				<span class=""><img src="IMGBIN_quality-control-computer-icons-quality-management-png_QKfVbtyg.png"style="color: black; width: 20px"></span>
+				<h4>Produtos de qualidade</h4>
+				<p style="font-family: 'Open Sans', sans-serif;">A qualidade de quem ama o que faz.</p>
+			</div>
+		</div>
+	</div>
+		
+	</div>
+</section>
+</div>
+
+
+
+<hr>
+
+<!--Faq section-->
+<div class="container" style="font-family: 'Oswald', sans-serif;">
+<section>
+	<div class="page-header" id="section-faq">
+		<h2>FAQ <small>Perguntas frequentes.</small></h2>
+	</div>
+
+    <div class="panel-group" id="accordion-qa" style="font-family: 'Open Sans', sans-serif;">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title"><a href="#qa-1" data-toggle="collapse" data-parent="#accordion-qa">Question 1</a></h4>
+		</div>
+		<div class="panel-collapse collapse in" id="qa-1">
+			<div class="panel-body">
+				This is where you'll get info about your question 1
+			</div>
+		</div>
+	</div>
+
+    <div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title"><a href="#qa-2" data-toggle="collapse" data-parent="#accordion-qa">Question 2</a></h4>
+		</div>
+		<div class="panel-collapse collapse" id="qa-2">
+			<div class="panel-body">
+				This is where you'll get info about your question 1
+			</div>
+		</div>
+	</div>
+
+    <div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title"><a href="#qa-3" data-toggle="collapse" data-parent="#accordion-qa">Question 3</a></h4>
+		</div>
+		<div class="panel-collapse collapse" id="qa-3">
+			<div class="panel-body">
+				This is where you'll get info about your question 1
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+</div>
+
+
+<!--
+
+ <div class="container-fluid" style="; height: auto; font-family: 'Oswald', sans-serif; ">
+ 	<section class="footer">
+ 		<div class="row">
+ 		<div class="rodapé text-center" style="background-color: rgba(255, 180, 255,0.5)">
+ 			<p style=";font-size: 18px; text-align: left; font-family: 'Open Sans', sans-serif;; padding-left: 10px; padding-top: 10px">Formas de pagamento: <img src="mbway.png" style="height: 30px"> <img src="transferencia.png"style="height: 30px"></p>
+ 		<p style=";font-size: 18px;padding-top: 10px; font-family: 'Open Sans', sans-serif;">Siga-nos e compartilhe</p>
+ 			<a href=""><i class="fab fa-facebook-square"style=" font-size:  30px;margin-bottom: "> </i> </a> 
+ 			<a href=""><i class="fab fa-instagram-square"style="padding-left: 35px;font-size:  30px; margin-bottom:15px; margin-top: 10px"></i> </a>
+ 		</div>
+ 		</div>
+ 	</section>
+ 	-->
+
+ </div>
+
+<div class="container-fluid" style="text-align: center; background-color: rgba(255, 180, 255,0.5);font-family: 'Titillium Web', sans-serif; ">
+	 <h2>Follow us and share</h2>
+	 <hr style="color: white; ">
+	<div class="flip-box" style="margin: 0 auto">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+     
+     <i class="fas fa-share-alt" style="font-size: 55px;margin-top:30px; color: white"></i>
+    </div>
+    <div class="flip-box-back">
+   <a href="https://www.facebook.com/lacosdavitoriapt" style="font-size: 45px;  color:#00bfff; "><i class="fab fa-facebook-f" style="margin-top:30px;"></i></a>
+   <a href="https://www.instagram.com/lacosdavitoriapt/?hl=pt" style="font-size: 45px; color:#00bfff;padding-left: 50px;"><i class="fab fa-instagram" ></i></a>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
